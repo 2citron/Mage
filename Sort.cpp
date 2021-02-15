@@ -3,16 +3,17 @@
 Sort::Sort() : m_nom{ "Default" }, m_type{ 'd' }, m_dmg{ 0 } {}
 Sort::Sort(string nom, char type, int dmg) : m_nom{ nom }, m_type{ type }, m_dmg{ dmg } {}
 
-void Sort::agir(Mage* mage) 
+int Sort::agir() 
 {
 	if (m_type == 'o') 
 	{
-		mage->recoitDmg(m_dmg);
+		return m_dmg;
 	}
-	if (m_type == 'd')
+	else if (m_type == 'd')
 	{
-		mage->buff(m_dmg);
+		return m_dmg;
 	}
+	return 0;
 }
 string Sort::getNom() {	return m_nom; }
 

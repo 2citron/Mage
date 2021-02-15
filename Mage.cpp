@@ -7,8 +7,18 @@ bool Mage::lancerSort(Mage* target, char type)
 {
 	if (m_mana > 0)
 	{
-		m_baton->lancerSort(type, target);
+		int dmg = m_baton->lancerSort(type);
+		if (type == 'o') 
+		{
+			target->recoitDmg(dmg);
+		}
+		else if (type == 'd') 
+		{
+			target->buff(dmg);
+		}
+		
 		m_mana -= 10;
+
 		return true;
 	}
 	return false;

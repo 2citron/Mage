@@ -1,10 +1,14 @@
-#include <iostream>
+#include"utilitaires.h"
 #include"Sort.h"
 #include"Baton.h"
 #include"Mage.h"
 
-#include"utilitaires.h"
+#include <iostream>
 #include<string>
+
+void actionJoueur(char playerInput, Mage* premier[2], Sort* sorts[4]);
+void actionAi(int aiInput, Mage* premier[2], Sort* sorts[4]);
+
 
 int main() 
 {

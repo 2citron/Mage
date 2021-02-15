@@ -2,7 +2,6 @@
 #define DEF_SORT
 
 #include <string>
-#include "Mage.h"
 
 using namespace std;
 
@@ -11,7 +10,7 @@ class Sort
 public:
 	Sort();
 	Sort(string nom, char type, int dmg);
-	void agir(Mage* mage);
+	int agir();
 	string getNom();
 	char getType();
 private:
